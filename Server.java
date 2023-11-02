@@ -9,7 +9,6 @@ public class Server {
     
     public CarbonFootPrintResponse fetchResponse(EmailInfo entity) {
         setEntity(entity);
-        fetchDomainName();
         setResponse();
         return response;
     }
@@ -18,18 +17,18 @@ public class Server {
         this.entity = entity;
     }
 
-    private String fetchDomainName() {
-        String email = entity.getEmail();
-        int startIndex =  email.indexOf('@');
-        return email.substring(startIndex+1, email.length()-4);
-    }
-
     private void setResponse() {
         response.setEmail(this.entity.getEmail());
         response.setDomain(fetchDomainName());
         response.setInboxCarbonFootPrint(getInboxCarbonFootPrint());
         response.setSentCarbonFootPrint(getSentCarbonFoortPrint());
         response.setSpamCarbonFootPrint(getSpamCarbonFootPrint());
+    }
+
+    private String fetchDomainName() {
+        String email = entity.getEmail();
+        int startIndex =  email.indexOf('@');
+        return email.substring(startIndex+1, email.length()-4);
     }
 
     private double getInboxCarbonFootPrint() {
