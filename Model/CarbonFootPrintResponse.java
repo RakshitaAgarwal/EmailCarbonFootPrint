@@ -10,35 +10,40 @@ public class CarbonFootPrintResponse {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return this.email;
     }
 
-    public void setDomain(String domain){
+    public void setDomain(String domain) {
         this.domain = domain;
     }
-    public String getDomain(){
+
+    public String getDomain() {
         return this.domain;
     }
 
     public void setInboxCarbonFootPrint(double carbonFootprint) {
         this.inboxCarbonFootPrint = carbonFootprint;
     }
-    public double getInboxCarbonFoortPrint() {
+
+    public double getInboxCarbonFootPrint() {
         return this.inboxCarbonFootPrint;
     }
 
     public void setSpamCarbonFootPrint(double carbonFootprint) {
         this.spamCarbonFootPrint = carbonFootprint;
     }
-    public double getSpamCarbonFoortPrint() {
+
+    public double getSpamCarbonFootPrint() {
         return this.spamCarbonFootPrint;
     }
 
     public void setSentCarbonFootPrint(double carbonFootprint) {
         this.sentCarbonFootPrint = carbonFootprint;
     }
-    public double getSentCarbonFoortPrint() {
+
+    public double getSentCarbonFootPrint() {
         return this.sentCarbonFootPrint;
     }
 }

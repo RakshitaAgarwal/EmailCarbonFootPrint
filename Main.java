@@ -6,12 +6,12 @@ public class Main {
 
     static String email;
     static int inbox, spam, sent;
-    static Server server = new Server();
+    static CarbonFootprintCalculator calculator = new CarbonFootprintCalculator();
 
     public static void main(String[] args) {
         System.out.println("This is the Program for calculating the Email Carbon FootPrint");
         fetchUserInput();
-        CarbonFootPrintResponse response = server.fetchResponse(new EmailInfo(email, inbox, spam, sent));
+        CarbonFootPrintResponse response = calculator.fetchResponse(new EmailInfo(email, inbox, spam, sent));
         printResponse(response);
     }
 
@@ -27,13 +27,13 @@ public class Main {
         sent = sc.nextInt();
         sc.close();
     }
-    
+
     public static void printResponse(CarbonFootPrintResponse response) {
-        System.out.println("\n\n Your Current Email Carbon Footprint Response is:");
+        System.out.println("\nYour Current Email Carbon Footprint Response is:");
         System.out.println("emailId : " + response.getEmail());
-        System.out.println("\nsource : " + response.getDomain());
-        System.out.println("\ninbox : " + response.getInboxCarbonFoortPrint() + "g");
-        System.out.println("\nsent : " + response.getSentCarbonFoortPrint() + "g");
-        System.out.println("\nspam : " + response.getSpamCarbonFoortPrint() + "g");
+        System.out.println("source : " + response.getDomain());
+        System.out.println("inbox : " + response.getInboxCarbonFootPrint() + "g");
+        System.out.println("sent : " + response.getSentCarbonFootPrint() + "g");
+        System.out.println("spam : " + response.getSpamCarbonFootPrint() + "g");
     }
 }
