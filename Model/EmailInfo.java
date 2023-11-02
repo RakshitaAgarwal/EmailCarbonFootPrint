@@ -4,8 +4,6 @@ public class EmailInfo {
     private int noOfInboxMessages = 0;
     private int noOfSpamMessages = 0;
     private int noOfSentMessages = 0;
-    // add getter and setter methods
-    // add public modefiers
 
     public EmailInfo(){}
     public EmailInfo(String email, int inbox, int spam, int sent) {
