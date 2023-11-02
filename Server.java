@@ -1,5 +1,6 @@
 import Model.EmailInfo;
 import Model.CarbonFootPrintResponse;
+import Model.CarbonFootprintConstants;
 
 public class Server {
 
